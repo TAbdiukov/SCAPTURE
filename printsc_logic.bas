@@ -61,3 +61,7 @@ Function auto_save(ByRef s As pic_container) As String
  save_pic_container_to_file s, paradigm
  auto_save = paradigm
 End Function
+
+Function watch() As String
+
+End Function

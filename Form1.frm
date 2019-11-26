@@ -7,6 +7,7 @@ Begin VB.Form Form1
    ClientLeft      =   45
    ClientTop       =   435
    ClientWidth     =   4680
+   Icon            =   "Form1.frx":0000
    LinkTopic       =   "Form1"
    MaxButton       =   0   'False
    MinButton       =   0   'False
@@ -36,7 +37,7 @@ Begin VB.Form Form1
       Left            =   120
       MultiLine       =   -1  'True
       TabIndex        =   1
-      Text            =   "Form1.frx":0000
+      Text            =   "Form1.frx":0ECA
       Top             =   240
       Width           =   4455
    End
@@ -76,7 +77,6 @@ Private Sub Form_Load()
  Timer1.Interval = 1
  Timer1.Enabled = True
  
- Me.Caption = "is this christmas 2019? Idk, go capture"
 End Sub
 
 Private Sub Timer1_Timer()
@@ -88,19 +88,24 @@ Private Sub Timer1_Timer()
   last = auto_save(s)
  End If
  Text1.Text = user_output()
+ 
+ Me.Caption = "[" & watch() & "] <- wait is this christmas 2019?"
 End Sub
 
 Function user_output() As String
  Dim s As String
  
  s = formal_appname & vbCrLf & _
-  "My watch says: " & get_unix_time_mod(Now) & vbCrLf & _
   "Status: " & IIf(Timer1.Enabled, "ON", "OFF") & vbCrLf & _
-  "Last saved: " & last & vbCrLf
+  "Last saved: " & IIf(Len(last), last, "None, try pressing PRINTSCREEN") & vbCrLf
   
  user_output = s
 End Function
 
 Function formal_appname() As String
- formal_appname = App.Title & " v" & App.Major & "." & App.Minor
+ formal_appname = App.Title & " v" & App.Major & "." & App.Minor & App.Revision
+End Function
+
+Function watch() As String
+ watch = get_unix_time_mod(Now)
 End Function
