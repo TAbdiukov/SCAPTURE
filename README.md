@@ -1,6 +1,5 @@
 # simple_capture
-![oooOOOooo](.\icons8-third-eye-symbol-64.png)
-Simple capturing tool for legacy/crazy systems
+![oooOOOooo](icons8-third-eye-symbol-64.png)Simple capturing tool for legacy/crazy systems
 
 ## Compat
 * Runs on everything made by microsoft and having a 8086-compatible processor
