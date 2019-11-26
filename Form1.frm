@@ -7,6 +7,15 @@ Begin VB.Form Form1
    ClientLeft      =   45
    ClientTop       =   435
    ClientWidth     =   4680
+   BeginProperty Font 
+      Name            =   "System"
+      Size            =   9.75
+      Charset         =   0
+      Weight          =   700
+      Underline       =   0   'False
+      Italic          =   0   'False
+      Strikethrough   =   0   'False
+   EndProperty
    Icon            =   "Form1.frx":0000
    LinkTopic       =   "Form1"
    MaxButton       =   0   'False
@@ -24,15 +33,6 @@ Begin VB.Form Form1
    End
    Begin VB.TextBox Text1 
       Enabled         =   0   'False
-      BeginProperty Font 
-         Name            =   "System"
-         Size            =   9.75
-         Charset         =   0
-         Weight          =   700
-         Underline       =   0   'False
-         Italic          =   0   'False
-         Strikethrough   =   0   'False
-      EndProperty
       Height          =   1335
       Left            =   120
       MultiLine       =   -1  'True
@@ -82,7 +82,7 @@ End Sub
 Private Sub Timer1_Timer()
  Dim s As printsc_logic.pic_container
  
- s = printsc_logic.get_pic_from_clipboard(clipboard)
+ s = printsc_logic.get_pic_from_clipboard(Clipboard)
  If (s.is_pic = True) Then
   Beep
   last = auto_save(s)
@@ -97,7 +97,7 @@ Function user_output() As String
  
  s = formal_appname & vbCrLf & _
   "Status: " & IIf(Timer1.Enabled, "ON", "OFF") & vbCrLf & _
-  "Last saved: " & IIf(Len(last), last, "None, try pressing PRINTSCREEN") & vbCrLf
+  "Last saved: " & IIf(Len(last), last, "None, try pressing Printscreen") & vbCrLf
   
  user_output = s
 End Function
