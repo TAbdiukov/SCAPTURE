@@ -1,4 +1,5 @@
 # simple_capture
+![oooOOOooo](.\icons8-third-eye-symbol-64.png)
 Simple capturing tool for legacy/crazy systems
 
 ## Compat
