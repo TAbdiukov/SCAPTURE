@@ -19,7 +19,6 @@ Begin VB.Form Form1
    Icon            =   "Form1.frx":0000
    LinkTopic       =   "Form1"
    MaxButton       =   0   'False
-   MinButton       =   0   'False
    ScaleHeight     =   3090
    ScaleWidth      =   4680
    StartUpPosition =   3  'Windows Default
