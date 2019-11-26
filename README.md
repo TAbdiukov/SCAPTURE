@@ -27,6 +27,7 @@ Simple capturing tool for legacy/crazy systems
 
 ## Sidenote
 * Third Eye Symbol icon icon by Icons8
+
 	( although I have the Icons8 licence from github 2019, best safe than sorry)
 
 ### Exploitz	

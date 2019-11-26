@@ -89,7 +89,7 @@ Private Sub Timer1_Timer()
  End If
  Text1.Text = user_output()
  
- Me.Caption = "[" & watch() & "] <- wait is this christmas 2019?"
+ Me.Caption = watch() & "<- wait is this Christmas 2019?"
 End Sub
 
 Function user_output() As String
