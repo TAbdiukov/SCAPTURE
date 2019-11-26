@@ -31,4 +31,4 @@ Simple capturing tool for legacy/crazy systems
 
 ### Exploitz	
 * Sometimes, upon startup, the tool captures out-of-place random icons, such as the classic Windows logo (on Win 10!) for some reason. Windows exploitation time?
-* Clipboard.GetData.Type *LITERALLY* lets you read and write everywhere, just like fmt str. It deal Booleans, sure, but still pretty dangerious
+* Clipboard.GetData.Type *LITERALLY* lets you read and write everywhere, just like fmt str. It deals Booleans, sure, but still pretty dangerous
