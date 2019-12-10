@@ -1,6 +1,8 @@
 Attribute VB_Name = "printsc_logic"
 Option Explicit
 
+Public Const MAX_INT_MOD = -2147483647
+
 Public Type pic_container
  is_pic As Boolean ' foolproof header
  pic As StdPicture
@@ -43,21 +45,37 @@ Private Function get_unix_time(d As Date) As Long
 End Function
 
 ' modded
-Function get_unix_time_mod(d As Date) As String
+Function get_unix_time_mod(d As Date, seed As Long) As String
+ ' seed: [000 ... 999]
+ seed = seed Mod 1000
  
  Dim k As Long
  Dim s As String
  
+ 
+ 
  k = DateDiff("s", "01/01/1990 00:00:00", d)
- s = Hex(k)
- s = Right$(s, 7) ' for 8:3 compat; -1 for extra savety
+ ' for 8:3 compat
+ k = k Mod 100000
+ s = zfill_long(k, 5) & zfill_long(seed, 3)
+ Debug.Assert Len(s) = 8
  
  get_unix_time_mod = s
 End Function
 
-Function auto_save(ByRef s As pic_container) As String
+' original from exe2wordsize
+Function zfill_long(i As Long, n As Byte) As String
+ ' format is kinda like zfill,
+ ' https://bytes.com/topic/visual-basic/answers/778694-how-format-number-0000-a
+ Dim buf As String
+ buf = String(n, "0")
+ zfill_long = Format(i, buf)
+End Function
+
+
+Function auto_save(ByRef s As pic_container, ByVal seed As Long) As String
  Dim paradigm As String
- paradigm = get_app_path() & get_unix_time_mod(Now) & ".BMP"
+ paradigm = get_app_path() & get_unix_time_mod(Now, seed) & ".BMP"
  save_pic_container_to_file s, paradigm
  auto_save = paradigm
 End Function

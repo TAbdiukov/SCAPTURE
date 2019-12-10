@@ -65,7 +65,8 @@ Attribute VB_PredeclaredId = True
 Attribute VB_Exposed = False
 Option Explicit
 Dim last As String
-
+Dim seed As Long
+Dim s As printsc_logic.pic_container
 
 Private Sub Command1_Click()
  Timer1.Enabled = Not Timer1.Enabled
@@ -79,16 +80,18 @@ Private Sub Form_Load()
 End Sub
 
 Private Sub Timer1_Timer()
- Dim s As printsc_logic.pic_container
- 
+ 'Timer1.Enabled = False
+ seed = (seed + 1) Mod 100000
+  
  s = printsc_logic.get_pic_from_clipboard(Clipboard)
  If (s.is_pic = True) Then
   Beep
-  last = auto_save(s)
+  last = auto_save(s, seed)
  End If
  Text1.Text = user_output()
  
- Me.Caption = watch() & "<- wait is this Christmas 2019?"
+ Me.Caption = watch(seed) & "<- wait is this 2019?"
+ 'Timer1.Enabled = True
 End Sub
 
 Function user_output() As String
@@ -105,6 +108,6 @@ Function formal_appname() As String
  formal_appname = App.Title & " v" & App.Major & "." & App.Minor & App.Revision
 End Function
 
-Function watch() As String
- watch = get_unix_time_mod(Now)
+Function watch(seed As Long) As String
+ watch = get_unix_time_mod(Now, seed)
 End Function
