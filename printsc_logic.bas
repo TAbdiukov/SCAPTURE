@@ -40,28 +40,26 @@ Function get_app_path() As String
 End Function
 
 ' original
-Private Function get_unix_time(d As Date) As Long
+Public Function get_unix_time(d As Date) As Long
  get_unix_time = DateDiff("s", "01/01/1970 00:00:00", d)
 End Function
 
+Function get_timebase(d As Date) As Long
+ get_timebase = DateDiff("s", "01/01/1990 00:00:00", d) Mod 100000 'zeros = how many digits max
+End Function
+
 ' modded
-Function get_unix_time_mod(d As Date, seed As Long) As String
+Function get_unix_time_mod(base As Long, seed As Long) As String
  ' seed: [000 ... 999]
- seed = seed Mod 1000
- 
- Dim k As Long
  Dim s As String
  
- 
- 
- k = DateDiff("s", "01/01/1990 00:00:00", d)
- ' for 8:3 compat
- k = k Mod 100000
- s = zfill_long(k, 5) & zfill_long(seed, 3)
+ s = zfill_long(base, 5) & zfill_long(seed, 3)
  Debug.Assert Len(s) = 8
  
  get_unix_time_mod = s
 End Function
+
+
 
 ' original from exe2wordsize
 Function zfill_long(i As Long, n As Byte) As String
@@ -69,7 +67,10 @@ Function zfill_long(i As Long, n As Byte) As String
  ' https://bytes.com/topic/visual-basic/answers/778694-how-format-number-0000-a
  Dim buf As String
  buf = String(n, "0")
- zfill_long = Format(i, buf)
+ buf = Format(i, buf)
+ buf = Left$(buf, n)
+ zfill_long = buf
+ 
 End Function
 
 
@@ -78,8 +79,4 @@ Function auto_save(ByRef s As pic_container, ByVal seed As Long) As String
  paradigm = get_app_path() & get_unix_time_mod(Now, seed) & ".BMP"
  save_pic_container_to_file s, paradigm
  auto_save = paradigm
-End Function
-
-Function watch() As String
-
 End Function

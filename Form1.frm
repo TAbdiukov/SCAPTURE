@@ -10,7 +10,7 @@ Begin VB.Form Form1
    BeginProperty Font 
       Name            =   "System"
       Size            =   9.75
-      Charset         =   0
+      Charset         =   204
       Weight          =   700
       Underline       =   0   'False
       Italic          =   0   'False
@@ -64,7 +64,8 @@ Attribute VB_Creatable = False
 Attribute VB_PredeclaredId = True
 Attribute VB_Exposed = False
 Option Explicit
-Dim last As String
+Dim pic_last As String
+Dim timebase_last As Long
 Dim seed As Long
 Dim s As printsc_logic.pic_container
 
@@ -80,17 +81,25 @@ Private Sub Form_Load()
 End Sub
 
 Private Sub Timer1_Timer()
+ Dim timebase_current As Long
+ 
  'Timer1.Enabled = False
- seed = (seed + 1) Mod 100000
-  
+ timebase_current = printsc_logic.get_unix_time(Now)
+ If (timebase_current = timebase_last) Then
+  seed = (seed + 1) Mod 1000
+ Else
+  seed = 0
+ End If
+ 
  s = printsc_logic.get_pic_from_clipboard(Clipboard)
  If (s.is_pic = True) Then
   Beep
-  last = auto_save(s, seed)
+  pic_last = auto_save(s, seed)
  End If
  Text1.Text = user_output()
  
- Me.Caption = watch(seed) & "<- wait is this 2019?"
+ Me.Caption = watch(seed) & "<- wait is this 2020?"
+ timebase_last = timebase_current
  'Timer1.Enabled = True
 End Sub
 
@@ -99,7 +108,7 @@ Function user_output() As String
  
  s = formal_appname & vbCrLf & _
   "Status: " & IIf(Timer1.Enabled, "ON", "OFF") & vbCrLf & _
-  "Last saved: " & IIf(Len(last), last, "None, try pressing Printscreen") & vbCrLf
+  "last saved: " & IIf(Len(pic_last), pic_last, "None, try pressing Printscreen") & vbCrLf
   
  user_output = s
 End Function
@@ -109,5 +118,5 @@ Function formal_appname() As String
 End Function
 
 Function watch(seed As Long) As String
- watch = get_unix_time_mod(Now, seed)
+ watch = get_unix_time_mod(get_unix_time(Now), seed)
 End Function
