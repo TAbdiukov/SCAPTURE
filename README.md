@@ -1,5 +1,5 @@
 #  ![oooOOOooo](icons8-third-eye-symbol-64.png) simple_capture ( `SCAPTURE.EXE` )
-Simple capturing tool for legacy/embedded systems
+Simple capturing tool for legacy/embedded/crazy systems
 
 ## Compat
 * Runs on everything made by microsoft and having a 8086-compatible processor
