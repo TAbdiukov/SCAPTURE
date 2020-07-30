@@ -49,14 +49,14 @@ Function get_timebase(d As Date) As Long
 End Function
 
 ' modded
-Function get_unix_time_mod(base As Long, seed As Long) As String
+Function get_fancy_timecode(base As Long, seed As Long) As String
  ' seed: [000 ... 999]
  Dim s As String
  
  s = zfill_long(base, 5) & zfill_long(seed, 3)
  Debug.Assert Len(s) = 8
  
- get_unix_time_mod = s
+ get_fancy_timecode = s
 End Function
 
 
@@ -76,7 +76,7 @@ End Function
 
 Function auto_save(ByRef s As pic_container, ByVal seed As Long) As String
  Dim paradigm As String
- paradigm = get_app_path() & get_unix_time_mod(Now, seed) & ".BMP"
+ paradigm = get_app_path() & get_fancy_timecode(get_unix_time(Now), seed) & ".BMP"
  save_pic_container_to_file s, paradigm
  auto_save = paradigm
 End Function

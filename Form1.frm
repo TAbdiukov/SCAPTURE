@@ -8,7 +8,7 @@ Begin VB.Form Form1
    ClientTop       =   435
    ClientWidth     =   4680
    BeginProperty Font 
-      Name            =   "System"
+      Name            =   "Arial"
       Size            =   9.75
       Charset         =   204
       Weight          =   700
@@ -98,7 +98,7 @@ Private Sub Timer1_Timer()
  End If
  Text1.Text = user_output()
  
- Me.Caption = watch(seed) & "<- wait is this 2020?"
+ Me.Caption = watch(seed) & "<- wait is this 2021?"
  timebase_last = timebase_current
  'Timer1.Enabled = True
 End Sub
@@ -118,5 +118,5 @@ Function formal_appname() As String
 End Function
 
 Function watch(seed As Long) As String
- watch = get_unix_time_mod(get_unix_time(Now), seed)
+ watch = get_fancy_timecode(get_unix_time(Now), seed)
 End Function
