@@ -98,7 +98,7 @@ Private Sub Timer1_Timer()
  End If
  Text1.Text = user_output()
  
- Me.Caption = watch(seed) & "<- wait is this 2021?"
+ Me.Caption = watch(seed) & " <- hmm"
  timebase_last = timebase_current
  'Timer1.Enabled = True
 End Sub
@@ -108,7 +108,7 @@ Function user_output() As String
  
  s = formal_appname & vbCrLf & _
   "Status: " & IIf(Timer1.Enabled, "ON", "OFF") & vbCrLf & _
-  "last saved: " & IIf(Len(pic_last), pic_last, "None, try pressing Printscreen") & vbCrLf
+  "Last saved: " & IIf(Len(pic_last), pic_last, "None, try pressing PrintScreen") & vbCrLf
   
  user_output = s
 End Function
@@ -117,6 +117,4 @@ Function formal_appname() As String
  formal_appname = App.Title & " v" & App.Major & "." & App.Minor & App.Revision
 End Function
 
-Function watch(seed As Long) As String
- watch = get_fancy_timecode(get_unix_time(Now), seed)
-End Function
+

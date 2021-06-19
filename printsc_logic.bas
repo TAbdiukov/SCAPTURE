@@ -68,15 +68,18 @@ Function zfill_long(i As Long, n As Byte) As String
  Dim buf As String
  buf = String(n, "0")
  buf = Format(i, buf)
- buf = Left$(buf, n)
+ buf = Right$(buf, n)
  zfill_long = buf
  
 End Function
 
+Function watch(seed As Long) As String
+ watch = get_fancy_timecode(get_unix_time(Now), seed)
+End Function
 
 Function auto_save(ByRef s As pic_container, ByVal seed As Long) As String
  Dim paradigm As String
- paradigm = get_app_path() & get_fancy_timecode(get_unix_time(Now), seed) & ".BMP"
+ paradigm = get_app_path() & watch(seed) & ".BMP"
  save_pic_container_to_file s, paradigm
  auto_save = paradigm
 End Function
