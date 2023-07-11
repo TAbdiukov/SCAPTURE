@@ -1,5 +1,5 @@
 #  ![oooOOOooo](icons8-third-eye-symbol-64.png) simple_capture ( `SCAPTURE.EXE` )  
-Simple capturing tool for embedded systems
+Simple capturing tool for embedded systems.
 
 ## Features
 * Barebones Windows OS compatible.
