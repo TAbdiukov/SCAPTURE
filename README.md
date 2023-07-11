@@ -15,12 +15,12 @@ Simple capturing tool for embedded systems
 * Press `Printscreen`
 * Observe .BMP images in the directory
 
+## Interesting insights
+
+* Sometimes, upon startup, the tool captures out-of-place random icons, such as the classic Windows logo (observed on Windows 10!).
+* Clipboard.GetData.Type *LITERALLY* lets you read and write everywhere, just like fmt str. It deals Booleans, sure, but still peculiar.
+
 ## Sidenote
 * Third Eye Symbol icon icon by Icons8
 
 	( although I have the Icons8 licence, best safe than sorry)
-
-### Interesting insights
-
-* Sometimes, upon startup, the tool captures out-of-place random icons, such as the classic Windows logo (observed on Windows 10!).
-* Clipboard.GetData.Type *LITERALLY* lets you read and write everywhere, just like fmt str. It deals Booleans, sure, but still peculiar.
