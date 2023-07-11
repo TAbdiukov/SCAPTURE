@@ -5,7 +5,7 @@ Simple screen capturing tool for embedded systems.
 * Barebones Windows OS compatible.
 	* Does not use any external WinAPI.
 	* Works on 16-bit systems.
-	* The tool saves in `.BMP` format only (limitation). 
+	* The tool saves in `.BMP` format only (limitation).  
 		PNG and other lossless formats require WinAPI/3rd-party classes - avoided for compatibility.
 * Doesn't require any sophisticated compiling procedures! Compile in IDE -> Good to go!
 
