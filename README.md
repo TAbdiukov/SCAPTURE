@@ -1,18 +1,18 @@
 #  ![oooOOOooo](icons8-third-eye-symbol-64.png) simple_capture ( `SCAPTURE.EXE` )  
-Simple capturing tool for embedded systems.
+Simple screen capturing tool for embedded systems.
 
 ## Features
 * Barebones Windows OS compatible.
-	* Doesn't use any external WinAPI.
 	* Works on 16-bit systems.
-	* The slight limitation, tool saves in `.bmp` only. 
+	* Doesn't use any external WinAPI.
+	* A slight limitation, tool saves in `.BMP` format only. 
 		PNG/other lossless formats require WinAPI/3rd-party classes, avoided for compatibility.
 * Doesn't require any sophisticated compiling procedures! Compile in IDE -> Good to go!
 
 ## Usage
 
 * Run the tool, make sure the status is ON
-* Press `Printscreen`
+* Press `PrintScreen`
 * Observe .BMP images in the directory
 
 ## Interesting insights
