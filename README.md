@@ -8,9 +8,6 @@ Simple capturing tool for embedded systems
 	* The slight limitation, tool saves in `.bmp` only. 
 		PNG/other lossless formats require WinAPI/3rd-party classes, avoided for compatibility.
 * Doesn't require any sophisticated compiling procedures! Compile in IDE -> Good to go!
---------------------------------------------------
-* Not too sophisticated
-
 
 ## Usage
 
@@ -24,5 +21,5 @@ Simple capturing tool for embedded systems
 	( although I have the Icons8 licence, best safe than sorry)
 
 ### Interesting insights
-* Sometimes, upon startup, the tool captures out-of-place random icons, such as the classic Windows logo (on Windows 10!).
+* Sometimes, upon startup, the tool captures out-of-place random icons, such as the classic Windows logo (observed on Windows 10!).
 * Clipboard.GetData.Type *LITERALLY* lets you read and write everywhere, just like fmt str. It deals Booleans, sure, but still peculiar.
