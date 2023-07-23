@@ -31,4 +31,4 @@ Simple screen-capturing tool for embedded systems.
 * [AMC_patcher-CLI](https://github.com/TAbdiukov/AMC_patcher-CLI) – (CLI) Patches app's SUBSYSTEM flag to modify app's behavior.
 * [exe2wordsize](https://github.com/TAbdiukov/exe2wordsize) – (CLI) Detects Windows-compatible application bitness, without ever running it.
 * [HWZ](https://github.com/TAbdiukov/HWZ) – (CLI) CLI engine to forge / synthesize handwriting.
-* [SCAPTURE.EXE](https://github.com/TAbdiukov/SCAPTURE.EXE) – (GUI) Simple screen-capturing tool for embedded systems.
+* **<ins>SCAPTURE.EXE</ins>** – (GUI) Simple screen-capturing tool for embedded systems.
