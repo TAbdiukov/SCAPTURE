@@ -22,8 +22,7 @@ Simple screen-capturing tool for embedded systems.
 
 ## Sidenote
 * Third Eye Symbol icon icon by Icons8
-
-	( although I have the Icons8 licence, best safe than sorry)
+	* Although I have their subscription, better safe than sorry
 
 ## See also
 *My other small Windows tools,*  
