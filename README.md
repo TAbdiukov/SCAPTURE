@@ -1,6 +1,8 @@
 #  ![oooOOOooo](icons8-third-eye-symbol-64.png) simple_capture ( `SCAPTURE.EXE` )  
 Simple screen-capturing tool for embedded systems.
 
+[![Download](https://img.shields.io/badge/download-success?style=for-the-badge&logo=github&logoColor=white)](https://github.com/TAbdiukov/SCAPTURE.EXE/releases/download/1.42/SCAPTURE.exe)
+
 ## Features
 * Barebones Windows OS compatible.
 	* Does not use any external WinAPI.
