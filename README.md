@@ -31,5 +31,5 @@ Simple screen-capturing tool for embedded systems.
 
 * [AMC_patcher-CLI](https://github.com/TAbdiukov/AMC_patcher-CLI) – (CLI) Patches app's SUBSYSTEM flag to modify app's behavior.
 * [exe2wordsize](https://github.com/TAbdiukov/exe2wordsize) – (CLI) Detects Windows-compatible application bitness, without ever running it.
-* [HWZ](https://github.com/TAbdiukov/HWZ) – (CLI) Fast engine to skew (or shear) text by a desired angle, emulating handwriting.
 * **<ins>SCAPTURE.EXE</ins>** – (GUI) Simple screen-capturing tool for embedded systems.
+* [txtShear](https://github.com/TAbdiukov/txtShear) – (CLI) Fast engine to skew (or shear) text by a desired angle, emulating handwriting.
