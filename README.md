@@ -6,10 +6,10 @@ Simple screen-capturing tool for embedded systems.
 ## Features
 * Barebones Windows OS compatible.
 	* Does not use any external WinAPI.
-	* Works on 16-bit systems.
+	* Works on 16-bit, embedded, other nonstandard systems.
 	* The tool saves in `.BMP` format only (limitation).  
 		PNG and other lossless formats require WinAPI/3rd-party classes - avoided for compatibility.
-* Doesn't require any sophisticated compiling procedures! Compile in IDE -> Good to go!
+* Simple to compile! Compile in IDE -> Good to go!
 
 ## Usage
 
@@ -20,10 +20,10 @@ Simple screen-capturing tool for embedded systems.
 ## Interesting insights
 
 * Sometimes, upon startup, the tool captures out-of-place random icons, such as the classic Windows logo (observed on Windows 10!).
-* `Clipboard.GetData.Type` lets you read and write everywhere within application memory. It deals Booleans, but still peculiar.
+* `Clipboard.GetData.Type` lets you read and write everywhere within application memory. It returns Booleans, but still peculiar.
 
 ## Sidenote
-* Third Eye Symbol icon icon by Icons8
+* Third Eye Symbol icon by Icons8
 	* Although I have their subscription, better safe than sorry
 
 ## See also
