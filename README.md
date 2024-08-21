@@ -19,7 +19,7 @@ Simple screen-capturing tool for embedded systems.
 
 ## Interesting insights
 
-* Sometimes, upon startup, the tool captures out-of-place random icons, such as the classic Windows logo (observed on Windows 10!).
+* Sometimes, upon startup, the tool captures out-of-place random icons, such as the classic Windows logo (observed on Windows 10!)
 * `Clipboard.GetData.Type` lets you read and write everywhere within application memory. It returns Booleans, but still peculiar.
 
 ## Sidenote
