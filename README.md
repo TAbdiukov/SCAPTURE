@@ -1,7 +1,7 @@
-#  ![oooOOOooo](icons8-third-eye-symbol-64.png) simple_capture ( `SCAPTURE.EXE` )  
+#  ![oooOOOooo](icons8-third-eye-symbol-64.png) simple_capture ( `SCAPTURE` )  
 Simple screen-capturing tool for embedded systems.
 
-[![Download](https://img.shields.io/badge/download-success?style=for-the-badge&logo=github&logoColor=white)](https://github.com/TAbdiukov/SCAPTURE.EXE/releases/download/1.42/SCAPTURE.exe)
+[![Download](https://img.shields.io/badge/download-success?style=for-the-badge&logo=github&logoColor=white)](https://github.com/TAbdiukov/SCAPTURE/releases/download/1.42/SCAPTURE.exe)
 
 ## Features
 * Barebones Windows OS compatible.
@@ -31,5 +31,5 @@ Simple screen-capturing tool for embedded systems.
 
 * [AMC_patcher-CLI](https://github.com/TAbdiukov/AMC_patcher-CLI) – (CLI) Patches app's SUBSYSTEM flag to modify app's behavior.
 * [exe2wordsize](https://github.com/TAbdiukov/exe2wordsize) – (CLI) Detects Windows-compatible application bitness, without ever running it.
-* **<ins>SCAPTURE.EXE</ins>** – (GUI) Simple screen-capturing tool for embedded systems.
+* **<ins>SCAPTURE</ins>** – (GUI) Simple screen-capturing tool for embedded systems.
 * [txtShear](https://github.com/TAbdiukov/txtShear) – (CLI) Fast engine to skew (or shear) text by a desired angle, emulating handwriting.
