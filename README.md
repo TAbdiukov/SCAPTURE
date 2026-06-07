@@ -1,4 +1,10 @@
-#  ![oooOOOooo](icons8-third-eye-symbol-64.png) simple_capture ( `SCAPTURE` )  
+#  ![oooOOOooo](icons8-third-eye-symbol-64.png) simple_capture ( `SCAPTURE` )
+
+[![GitHub](https://img.shields.io/badge/GitHub-TAbdiukov/SCAPTURE-black?logo=github)](https://github.com/TAbdiukov/SCAPTURE)
+![License](https://img.shields.io/github/license/TAbdiukov/SCAPTURE)
+
+[![buymeacoffee](https://www.buymeacoffee.com/assets/img/custom_images/orange_img.png)](https://www.buymeacoffee.com/tabdiukov)
+
 Simple screen-capturing tool for embedded systems.
 
 [![Download](https://img.shields.io/badge/download-success?style=for-the-badge&logo=github&logoColor=white)](https://github.com/TAbdiukov/SCAPTURE/releases/download/1.42/SCAPTURE.exe)
